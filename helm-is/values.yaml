@@ -1,0 +1,17 @@
+deployment :  
+  replicas : 1
+  mainContainer :
+    name : wso2is
+    image : gimhanwso2/wso2is:latest
+    port : 9443
+
+service :
+  type : NodePort
+  port : 9443
+  portName: https
+
+
+ingress :
+  host1 : wso2
+
+checkHealth : false
